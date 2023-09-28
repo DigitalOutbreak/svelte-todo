@@ -1,5 +1,7 @@
 # Todo list with Svelte
 
+This is a simple CRUD app to get familiar with using Svelte
+
 ## Instructions to build:
 
 ### 🔥 Add todo
