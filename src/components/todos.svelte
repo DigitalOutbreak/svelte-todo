@@ -38,7 +38,7 @@
 
   function completeTodo(id: string): void {
     todos = todos.map((todo) => {
-      if (todo.id !== id) {
+      if (todo.id === id) {
         todo.completed = !todo.completed;
       }
       return todo;
