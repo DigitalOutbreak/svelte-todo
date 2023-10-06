@@ -31,6 +31,8 @@
     todos = [...todos, newTodo];
   }
 
+  // function addTodo(todo: )
+
   function toggleCompleted(event: MouseEvent): void {
     let { checked } = event.target as HTMLInputElement;
     todos = todos.map((todo) => ({ ...todo, completed: checked }));
@@ -53,12 +55,20 @@
   // this needs to pass in an Id in order to know which todo to edit
   // also needs to pass in a string or newTodo to know what to edit to
 
+  // Edit Todo Original Version
   function editTodo(id: string, newTodo: string): void {
-    // in order to find the current id to know which to id, we use findIndex
     let currentTodo = todos.findIndex((todo) => todo.id === id);
-    //take our new todo string and put it into our current index .text
     todos[currentTodo].text = newTodo;
   }
+  // My Version of Edit Todo
+  // function editTodo(id: string, newTodo: string): void {
+  //   todos = todos.map((todo) => {
+  //     if (todo.id === id) {
+  //       todo.text = newTodo;
+  //     }
+  //     return todo;
+  //   });
+  // }
 
   // function editTodo(id: string, newTodo: string): void {
   //   let currentTodo = todos.findIndex((todo) => (todo.id = id));
