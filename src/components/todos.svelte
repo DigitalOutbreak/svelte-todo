@@ -52,12 +52,13 @@
   }
 
   // Make a edit todo Method
-  // this needs to pass in an Id in order to know which todo to edit
-  // also needs to pass in a string or newTodo to know what to edit to
 
   // Edit Todo Original Version
+  // this needs to pass in an Id in order to know which todo to edit
+  // also needs to pass in a string or newTodo to know what to edit to
   function editTodo(id: string, newTodo: string): void {
     let currentTodo = todos.findIndex((todo) => todo.id === id);
+    if (newTodo === '') return;
     todos[currentTodo].text = newTodo;
   }
   // My Version of Edit Todo
